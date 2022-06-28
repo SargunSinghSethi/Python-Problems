@@ -42,3 +42,6 @@ def solve(n, arr):
     if len(s) < len(arr):
         return 1
     return 0
+
+arr = [1 2 3 1]
+print(solve(len(arr),arr))
