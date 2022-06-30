@@ -50,11 +50,18 @@
 
 
 def solve(n, nums, target):
-    for i in range(n):
+    high = n-1
+    low = 0
+    
+    while low <= high:
+        i = low + ((high - low) // 2)
         if target == nums[i]:
             return i 
+        if target > nums[i]:
+            low = i + 1
+        else:
+            high = i - 1
     return -1
-    
 nums = [-1, 0, 3, 5, 9, 12]
-target = 2
-print(len(nums), nums, target)
+target = 9
+print(solve(len(nums),nums,target))
