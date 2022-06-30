@@ -44,7 +44,7 @@
 # Expected Time Complexity: O(n)
 # Expected Space Complexity: O(1)
 
-
+# SOLUTION
 def solve(n, arr, x, y):
     avg = 0
     for i in range(n):
