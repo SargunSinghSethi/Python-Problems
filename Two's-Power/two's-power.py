@@ -48,3 +48,4 @@ def solve(n):
         n /= 2
     return 1
 print(solve(65536))
+# RESULT - 1
