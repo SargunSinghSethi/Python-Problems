@@ -39,11 +39,17 @@
 
 
 def solve(n, arr, key):
-    for i in range(n):
-        if key == arr[i]:
-            return i
-        if arr[i] > key:
-            return i
+    if arr[0] > key:
+		return 0
+	l, h = 0, n - 1
+	while l <= h:
+		m = l + ((h - l)//2)
+		if arr[m] == key or (m != 0 and arr[m] > key and arr[m - 1] < key):
+			return m
+		if arr[m] < key:
+			l = m + 1
+		else:
+			h = m - 1
     return n
     
 arr = [1, 3, 8, 9, 11]
